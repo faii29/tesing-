@@ -15,24 +15,26 @@
 
     body {
       margin: 0;
-      font-family: 'Dancing Script', Tahoma, Geneva, Verdana, sans-serif;
+      font-family: 'Dancing Script', cursive, sans-serif;
       background: linear-gradient(to right, var(--gradient-start), var(--gradient-end));
       display: flex;
       justify-content: center;
       align-items: center;
       height: 100vh;
+      padding: 1rem;
     }
 
     .card {
       background-color: white;
-      padding: 40px;
+      padding: 2rem;
       border-radius: 15px;
-      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
       text-align: center;
-      width: 90%;
+      width: 100%;
       max-width: 400px;
       opacity: 0;
       transform: translateY(50px);
+      box-sizing: border-box;
     }
 
     @keyframes bounceIn {
@@ -55,23 +57,24 @@
 
     .card h1 {
       color: var(--primary-color);
-      margin-bottom: 10px;
+      margin-bottom: 0.5rem;
+      font-size: 2rem;
     }
 
     .card p {
       color: #444;
-      font-size: 14px;
-      margin: 5px 0;
+      font-size: 1rem;
+      margin: 0.3rem 0;
     }
 
     .heart {
-      font-size: 48px;
-      margin-bottom: 20px;
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
     }
 
     .btn {
-      margin-top: 20px;
-      padding: 10px 20px;
+      margin-top: 1.5rem;
+      padding: 0.75rem 1.5rem;
       background-color: var(--button-color);
       color: white;
       border: none;
@@ -79,12 +82,34 @@
       cursor: pointer;
       box-shadow: 0 4px 10px rgba(255, 77, 166, 0.5);
       font-weight: bold;
+      font-size: 1rem;
       transition: background-color 0.3s ease, transform 0.2s ease;
+      width: 100%;
+      max-width: 250px;
     }
 
     .btn:hover {
       background-color: var(--button-hover);
       transform: scale(1.05);
+    }
+
+    @media (max-width: 480px) {
+      .card {
+        padding: 1.5rem;
+      }
+
+      .card h1 {
+        font-size: 1.75rem;
+      }
+
+      .heart {
+        font-size: 2rem;
+      }
+
+      .btn {
+        font-size: 0.95rem;
+        padding: 0.65rem 1.2rem;
+      }
     }
   </style>
 </head>
